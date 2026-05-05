@@ -28,13 +28,13 @@ jobs:
 
             - name: Run tests
               run: |
-                mkdir -p reports
-                npm test --reporter=default --reporter=junit --outputFile.junit=reports/vitest-junit.xml
+                  mkdir -p reports
+                  npm test -- --reporter=default --reporter=junit --outputFile.junit=reports/vitest-junit.xml
 
             - name: Upload test report artifact
               if: always()
               uses: actions/upload-artifact@v4
               with:
-                name: test-report
-                path: reports/
-                if-no-files-found: error
+                  name: test-report
+                  path: reports/
+                  if-no-files-found: error
