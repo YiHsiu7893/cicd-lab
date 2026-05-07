@@ -27,7 +27,7 @@ jobs:
 
       - name: EsLint
         run: npm run lint
-      
+
       - name: Run tests
         run: |
           mkdir -p reports
@@ -37,6 +37,6 @@ jobs:
         if: always()
         uses: dorny/test-reporter@v3
         with:
-          name: test-report            
-          path: reports/vitest-junit.xml    
-          reporter: java-junit       
+          name: test-report
+          path: reports/vitest-junit.xml
+          reporter: java-junit
