@@ -25,4 +25,16 @@ describe('Fastify app', () => {
     expect(response.json().message).toBe('CI/CD Lab Fastify app is running');
     await app.close();
   });
+
+  // it('GET /version returns app version', async () => {
+  //   const app = buildApp({ logger: false });
+  //   const response = await app.inject({
+  //     method: 'GET',
+  //     url: '/version'
+  //   });
+
+  //   expect(response.statusCode).toBe(200);
+  //   expect(response.json().version).toBe(process.env.APP_VERSION || 'dev');
+  //   await app.close();
+  // });
 });

@@ -19,5 +19,11 @@ export function buildApp(options: FastifyServerOptions = {}) {
     };
   });
 
+  app.get('/version', async () => {
+    return {
+      version: process.env.APP_VERSION || 'dev'
+    };
+  });
+
   return app;
 }

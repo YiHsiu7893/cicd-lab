@@ -2,7 +2,8 @@ name: HW4
 
 on:
   push:
-    branches: '**'
+    branches: 
+      - '**'
 
 jobs:
   ci:
